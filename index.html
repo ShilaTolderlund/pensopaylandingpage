@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pensopay Landingpage</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-dyvD7G+TQk+jKhHGmZcQ0bkRuw4i0QxRP91ArH6qf53qxav3oZIuMfdQplzqT0r5FZJX6T5Hhx7rqk0EJj1T9g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="container header-container">
+    <img src="pensopay_logo.png" alt="Pensopay logo" class="header-logo" />
+    <nav class="nav desktop-nav">
+      <a href="#">Hvorfor Pensopay</a>
+      <a href="#">Kunder</a>
+      <a href="#">Inspiration</a>
+      <a href="#">Sign up</a>
+      <a href="#" class="active">Login</a>
+      <a href="#">Hjælp</a>
+      <button class="search-icon-button" id="open-search">
+        <i class="fas fa-search search-icon desktop-search"></i>
+      </button>
+    </nav>
+    <div class="mobile-toggle" id="mobile-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </div>
+
+  <!-- Mobilmenu -->
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="#">Hvorfor Pensopay</a>
+    <a href="#">Kunder</a>
+    <a href="#">Inspiration</a>
+    <a href="#">Sign up</a>
+    <a href="#" class="active">Login</a>
+    <a href="#">Hjælp</a>
+    <i class="fas fa-search search-icon" id="open-search-mobile"></i>
+  </nav>
+</header>
+
+<!-- Søge-popup -->
+<div id="search-popup" class="search-popup">
+  <div class="search-popup-content">
+    <span id="close-search" class="close-search">&times;</span>
+    <input type="text" placeholder="Søg på siden..." class="search-input" />
+    <button type="submit" class="search-submit"><i class="fas fa-search"></i></button>
+  </div>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container hero-content">
+    <div class="hero-text">
+      <h1>Bliv klar til at modtage betalinger<br>på din webshop</h1>
+      <p><strong>Pensopay</strong> tilbyder en online betalingsløsning til din webshop.<br>
+        Tilbyd dine kunder de mest populære betalingsmetoder.</p>
+      <p><strong>Gratis oprettelse og ingen binding!</strong></p>
+      <div class="cta-buttons">
+        <a href="#" class="cta-primary">Opret dig her</a>
+        <a href="#kontakt" class="cta-secondary">Kontakt</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="gradient-overlay"></div>
+      <img src="muckup-website.png" alt="Pensopay mockup">
+    </div>
+  </div>
+</section>
+
+<!-- USP -->
+<section class="usps">
+  <div class="usp">
+    <i class="fas fa-coins"></i>
+    <h3>Betalingsløsning fra 0 kr./md.</h3>
+    <p>Gratis oprettelse og ingen binding på online betalinger til din webshop!</p>
+  </div>
+  <div class="usp">
+    <i class="fas fa-plug"></i>
+    <h3>Hurtig integration</h3>
+    <p>Kompatibel med over 50 shopsystemer.</p>
+  </div>
+  <div class="usp">
+    <i class="fas fa-headset"></i>
+    <h3>Support i verdensklasse</h3>
+    <p>Svartid under 3 minutter – vi er her for dig!</p>
+  </div>
+</section>
+
+<!-- Testemonials -->
+<section class="carousel-container">
+  <div class="testimonial-heading">
+    <h2>Webshopejere deler deres erfaring med Pensopay</h2>
+    <p>Her er et udpluk af, hvad nogle af vores kunder siger om samarbejdet og løsningen.</p>
+  </div>
+  <div class="carousel-track-container">
+    <div class="carousel-track" id="carousel">
+      <div class="carousel-slide"><img src="1.png" alt="Anmeldelse 1" /></div>
+      <div class="carousel-slide"><img src="2.png" alt="Anmeldelse 2" /></div>
+      <div class="carousel-slide"><img src="3.png" alt="Anmeldelse 3" /></div>
+    </div>
+  </div>
+  <button class="carousel-arrow left" onclick="prevSlide()">‹</button>
+  <button class="carousel-arrow right" onclick="nextSlide()">›</button>
+</section>
+
+<!-- Partners -->
+<section class="partners">
+  <h2>Vores samarbejdspartnere</h2>
+  <p>Vi arbejder tæt sammen med de mest populære betalingsudbydere for at sikre en nem og fleksibel løsning.</p>
+  <section class="partner-grid">
+    <div class="partner-box"><img src="anyday_logo.png" alt="Anyday logo"></div>
+    <div class="partner-box"><img src="applepay_logo.png" alt="Apple Pay logo"></div>
+    <div class="partner-box"><img src="dankort_logo.png" alt="Dankort logo"></div>
+    <div class="partner-box"><img src="mastercard_logo.png" alt="MasterCard logo"></div>
+    <div class="partner-box"><img src="visa_logo.png" alt="Visa logo"></div>
+    <div class="partner-box"><img src="mobilepay_logo.webp" alt="MobilePay logo"></div>
+  </section>  
+</section>
+
+<!-- Kontaktformular -->
+<section id="kontakt" class="kontakt-section">
+  <div class="container kontakt-container">
+    <h2>Kontakt os</h2>
+    <p>Har du spørgsmål? Udfyld formularen, og vi vender tilbage hurtigst muligt.</p>
+    <form class="kontakt-form">
+      <input type="text" placeholder="Navn" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Besked" rows="5" required></textarea>
+      <button type="submit" class="cta-primary">Send besked</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-logo">
+      <p style="font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem;">Pensopay – Think beyond payments</p>
+      <p style="font-size: 0.9rem; color: #d1d5db;">En del af Visma</p>
+    </div>
+    <div class="footer-links">
+      <h4>Information</h4>
+      <ul>
+        <li><a href="#">Om os</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Jobs</a></li>
+        <li><a href="#">Presse</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Dokumentation</a></li>
+        <li><a href="#">Kontakt os</a></li>
+        <li><a href="#">Driftsstatus</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Kontakt</h4>
+      <p>Email: support@pensopay.dk</p>
+      <p>Telefon: +45 70 26 20 50</p>
+      <p>Åbningstider: Man–Fre 08.00–16.00</p>
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Pensopay – Alle rettigheder forbeholdes</p>
+  </div>
+</footer>
+
+
+<!-- Scripts -->
+<script>
+  const toggle = document.getElementById('mobile-toggle');
+  const mobileNav = document.getElementById('mobile-nav');
+  toggle.addEventListener('click', () => {
+    mobileNav.classList.toggle('open');
+  });
+  document.querySelectorAll('.mobile-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileNav.classList.remove('open');
+    });
+  });
+  window.addEventListener('scroll', function () {
+    const header = document.querySelector('.header');
+    if (window.scrollY > 10) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+  const searchPopup = document.getElementById('search-popup');
+  const openSearch = document.getElementById('open-search');
+  const openSearchMobile = document.getElementById('open-search-mobile');
+  const closeSearch = document.getElementById('close-search');
+  openSearch.addEventListener('click', () => {
+    searchPopup.classList.add('visible');
+  });
+  openSearchMobile.addEventListener('click', () => {
+    searchPopup.classList.add('visible');
+  });
+  closeSearch.addEventListener('click', () => {
+    searchPopup.classList.remove('visible');
+  });
+</script>
+
+</body>
+</html>
+
